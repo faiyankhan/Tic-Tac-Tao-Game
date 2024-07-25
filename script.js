@@ -17,3 +17,26 @@ const winPatterns = [
     [3, 4, 5],
     [6, 7, 8]
 ];
+
+const resetGame = () => {
+    turn_O = true;
+    enableBoxes();
+    msg_container.classList.add("hide");
+};
+
+boxes.forEach((box) => {
+    box.addEventListener("click", () => {
+        if(turn_O) {
+            box.innerText = "O";
+            turn_O = false;
+        }
+        else{
+            box.innerText = "X";
+            turn_O = true;
+        }
+
+        box.disabled = true;
+
+        checkWinner();
+    });
+});

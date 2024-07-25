@@ -40,3 +40,23 @@ boxes.forEach((box) => {
         checkWinner();
     });
 });
+
+
+const disableBoxes = () => {
+    for(let box of boxes) {
+        box.disabled = true;
+    }
+};
+
+const enableBoxes = () => {
+    for(let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+    }
+};
+
+const showWinner = (winner) => {
+    msg.innerText = `🎉Congratulations Our Winner is  ${winner}🎉`;
+    msg_container.classList.remove("hide");
+    disableBoxes();
+};

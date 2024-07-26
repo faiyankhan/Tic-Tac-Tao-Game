@@ -80,3 +80,22 @@ const  checkWinner = () => {
 
 newGame_btn.addEventListener("click", resetGame);
 reset_btn.addEventListener("click", resetGame);
+
+
+
+modeBtn.addEventListener("click", () =>{
+    if (currMode === "light") {
+        currMode = "dark";
+      document.querySelector("body").style.color = "white";
+      document.querySelector("#msg").style.color = "white";
+      document.querySelector("body").style.backgroundColor = "#e67300";
+    } 
+    else {
+        currMode ="light";
+        document.querySelector("body").style.color = "black";
+        document.querySelector("#msg").style.color = "black";
+        document.querySelector("body").style.backgroundColor = "#ffcc80";
+    }
+
+    console.log(currMode);
+});

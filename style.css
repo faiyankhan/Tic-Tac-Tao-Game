@@ -59,6 +59,15 @@ body{
     box-shadow: 0 0 15px black;
 }
 
+#mode-button{
+    padding: 8px;
+    margin: 10px 70px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 15px black;
+}
+
 #msg{
     color:black;
     font-size: 30px;
